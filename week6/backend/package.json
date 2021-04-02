@@ -1,0 +1,39 @@
+{
+  "name": "seminar-week4-server",
+  "version": "1.0.0",
+  "description": "REST-API for the TODO-list application. Part of the course on Development Tools at Saxion University",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test",
+    "test:report": "npx mocha --reporter mocha-simple-html-reporter --reporter-options output=./mocha/mocha-report.html",
+    "test:coverage": "nyc npm run test",
+    "test:coverage-html": "npx nyc --reporter=html --reporter=text mocha",
+    "test:coverage-html-summary": "npx nyc --reporter html --reporter text -t coverage --report-dir coverage/summary mocha",
+    "lint": "eslint ./server ./test",
+    "lint:fix": "eslint ./server ./test --fix",
+    "jsdoc": "jsdoc ./server",
+    "apidoc": "apidoc -i ./server -o ./server/public/apidoc/",
+    "watch": "nodemon index.js"
+  },
+  "author": "Evert Duipmans",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "lodash": "^4.17.11",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.27.1",
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.3.2",
+    "mocha-simple-html-reporter": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0"
+  }
+}

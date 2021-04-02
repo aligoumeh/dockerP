@@ -1,0 +1,9 @@
+{
+    "name": "TODO List : API documentation",
+    "version": "1.0.0",
+    "description": "Apidoc for backend project TODO list",
+    "title": "TODO API",
+    "template": {
+        "forceLanguage": "en"
+    }
+}
