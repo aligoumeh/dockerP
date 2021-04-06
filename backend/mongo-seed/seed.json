@@ -1,0 +1,22 @@
+[{
+    "name": "Ali",
+    "street": "1th",
+    "city": "Deventer",
+    "country": "Netherlands"
+},{
+    "name": "Lucai",
+    "street": "2th",
+    "city": "Arnhem",
+    "country": "Netherlands"
+},{
+    "name": "Max",
+    "street": "3th",
+    "city": "Rotterdam",
+    "country": "Netherlands"
+},{
+    "name": "John",
+    "street": "4th",
+    "city": "Amsterdam",
+    "country": "Netherlands"
+}
+]
