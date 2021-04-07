@@ -1,5 +1,7 @@
 FROM mongo
 
-COPY seed.json /seed.json
+WORKDIR /app
 
-CMD mongoimport --host mongodb --db persondb --collection person --type json --file /seed.json --jsonArray
+COPY seed.json /init.json
+
+CMD mongoimport --host mongodb --db persondb --collection person --type json --file /init.json --jsonArray
