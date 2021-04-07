@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+    frontend:
+        restart: always
+        build: ./frontend
+        ports:
+            - '8080:80'
+    mongodb:
+        image: mongo
+        restart: always
+        ports:
+            - '27017:27017'
+    mongo-seed:
+        build: ./backend/mongo-seed
+        depends_on:
+            - mongodb
+
+    backend:
+        restart: always
+        build: ./backend
+        ports:
+            - '3000:3000'
+        depends_on:
+            - mongodb
+        environment: 
+            DB_HOST: "mongodb"
+            DB_NAME: "persondb"
+        # ports: 
+        #     - '27017:27017'
+    
