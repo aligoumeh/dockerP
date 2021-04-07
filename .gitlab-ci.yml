@@ -2,7 +2,6 @@ default:
   image: node:latest
 
 build:
-  image: alpine:latest
   stage: build
   script:
     - cd frontend
