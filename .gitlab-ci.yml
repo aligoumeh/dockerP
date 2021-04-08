@@ -1,5 +1,3 @@
-default:
-  image: node:latest
 
 deploy:
   image: alpine:latest
