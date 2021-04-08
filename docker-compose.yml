@@ -25,6 +25,3 @@ services:
         environment: 
             DB_HOST: "mongodb"
             DB_NAME: "grp520"
-        # ports: 
-        #     - '27017:27017'
-    
