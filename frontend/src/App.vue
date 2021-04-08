@@ -71,6 +71,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: chartreuse;
+  background-color: rgb(235, 102, 13);
 }
 </style>
