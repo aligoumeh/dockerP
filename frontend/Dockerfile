@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# production stage
+# run stage
 FROM nginx:stable-alpine as run-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 EXPOSE 80

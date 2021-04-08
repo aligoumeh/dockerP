@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY seed.json /init.json
 
-CMD mongoimport --host mongodb --db persondb --collection person --type json --file /init.json --jsonArray
+CMD mongoimport --host mongodb --db grp520 --collection person --type json --file /init.json --jsonArray
