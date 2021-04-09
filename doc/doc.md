@@ -1,4 +1,10 @@
 # Docker
+
+
+**Ali Goumeh 475441**
+
+**Lucia Pusova 474237**
+
 ### Frontend
 we create a multi stage docker file for front end with a nginx server running on port 80 with exposure of that port
 
