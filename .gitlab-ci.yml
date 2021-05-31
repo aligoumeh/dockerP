@@ -1,6 +1,6 @@
 build:
   image: node:latest
-  stage: deploy
+  stage: build
   script:
     - cd frontend
     - npm install
