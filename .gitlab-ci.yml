@@ -1,4 +1,3 @@
-
 deploy:
   image: alpine:latest
   stage: deploy
@@ -7,4 +6,7 @@ deploy:
     - mkdir -p ~/.ssh
     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r frontend/dist/* devtools-520@vps2644.directvps.nl:public_html
+    - cd frontend
+    - npm install
+    - npm run build
+    - scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r ./dist/* devtools-520@vps2644.directvps.nl:public_html
