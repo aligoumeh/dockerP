@@ -1,4 +1,4 @@
-  
+deploy:  
   image: alpine:latest
   stage: deploy
   script:
