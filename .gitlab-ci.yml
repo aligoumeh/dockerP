@@ -1,10 +1,15 @@
-deploy:
+build:
   image: node:latest
   stage: deploy
   script:
     - cd frontend
     - npm install
     - npm run build
+
+deploy:
+  image: apline:latest
+  stage: deploy
+  script:
     - apk add --no-cache openssh
     - mkdir -p ~/.ssh
     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_rsa
