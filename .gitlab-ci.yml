@@ -1,5 +1,5 @@
 deploy:
-  image: alpine:latest
+  image: node:latest
   stage: deploy
   script:
     - cd frontend
